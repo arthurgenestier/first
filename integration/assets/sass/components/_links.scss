@@ -1,0 +1,76 @@
+/* == Links == */
+
+a{
+    color: $web-orange;
+}
+a:hover{
+    color: $medium-purple;
+}
+
+.item__link,
+.footer__link,
+.follow-us__link {
+  text-decoration: none;
+}
+
+.item__link img{
+  width: 2rem;
+  height: auto;
+}
+
+
+/* == CTAs == */
+
+.ctas__link{
+  font-family: 'Aclonica', sans-serif;
+  font-size: 1.8rem;
+  display: block;
+  padding: 1.3rem 7.2rem;
+  border-radius: 1rem;
+  text-align: center;
+  text-decoration: none;
+  /* mobile first */
+  width: 100%;
+  margin: 0 auto 3rem auto;
+  max-width: 35rem;
+  cursor: pointer;
+  text-shadow: 0.1rem 0.1rem 0.1rem rgba($brand-black, 0.3);
+  border-radius: 1rem;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.ctas__link--fanclub{
+  color: $brand-white;
+  background-color: $medium-purple;
+}
+
+.ctas__link--fanclub:hover,
+.ctas__link--fanclub:focus{
+  color: $brand-white;
+  background-color: $web-orange;
+}
+.ctas__link--newsletter{
+  color: $brand-white;
+  background-color: $medium-purple;
+}
+.ctas__link--newsletter:hover,
+.ctas__link--newsletter:focus{
+  color: $brand-white;
+  background-color: $web-orange;
+}
+
+.ctas__link--buy {
+  color: $brand-white;
+  background: linear-gradient(45deg, $web-orange, $medium-purple);
+  padding: 1rem 0;
+  margin-top: 1rem;
+}
+.ctas__link--buy:hover,
+.ctas__link--buy:focus {
+  background-color: $brand-black-transparent;
+  text-decoration: none;
+  color: $brand-black;
+}

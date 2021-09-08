@@ -1,0 +1,38 @@
+/* page Clips */
+.clips-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30rem;
+    background: url("../images/tv.jpg") center center  no-repeat;
+    background-size: cover;
+  }
+  .clips {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    @media (min-width: 37.5em) {
+      flex-flow: row wrap;
+      justify-content: space-around;
+    }
+  }
+  .clips__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 3rem auto;
+  }
+  .clips__video video{
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .clips__info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  /* == page Clip (page détail: single.php) == */

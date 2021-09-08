@@ -1,0 +1,46 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+// Left column
+.left {
+  padding: 3rem 2rem 1rem 2rem;
+  background-image: url(../images/nicole-mobile.jpg);
+  background-position: center center;
+  background-size: cover;
+  color: var(--brand-white);
+
+  @include mixins.mq(variables.$bp-mobile) {
+    background-image: url(../images/nicole-medium.jpg);
+  }
+
+  @include mixins.mq(variables.$bp-desktop) {
+    width: 50%;
+    padding: 1rem;
+    background-image: url(../images/nicole-large.jpg);
+    background-position: center center;
+    background-size: cover;
+    color: var(--brand-white);
+
+    // On répartit l'espace vertical en trop entre chaque élément
+    display: flex;
+    flex-direction: column;
+
+    // Comme on a changé le sens, justify-content change de sens aussi, et répartit verticalement les espaces
+    justify-content: space-between;
+
+    // Bonus défilement, on garde la partie de gauche figée
+    position: fixed;
+
+    // Comme l'élément est sorti flux, y'a plus de flex, et donc la hauteur est la hauteur minimum par rapport au contenu
+    // => on force 100% de la height du navigateur
+    height: 100vh;
+  }
+}
+
+// Right column
+.right {
+  @include mixins.mq(variables.$bp-desktop) {
+    width: 50%;
+    margin-left: 50%;
+  }
+}

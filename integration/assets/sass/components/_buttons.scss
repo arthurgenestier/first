@@ -1,0 +1,37 @@
+/* buttons */
+
+// main menu button
+.header-inner__button {
+    width: 6rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content:stretch;
+    align-items: center;
+    margin: 0 1rem 0 auto;
+    background-color: $cod-gray;
+    border:none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+    img {
+        transform: scale(0.8);
+        padding: 0.3rem;
+        border-radius: 0.5rem;
+        padding: 1rem;
+    }
+  
+    span {
+        color: $brand-white;
+    }
+
+    &:hover,
+    &:focus {
+        img {
+            outline: 0.3rem solid $medium-purple;
+        }
+    }
+  }
+  
+  
+  

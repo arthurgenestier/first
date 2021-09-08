@@ -1,0 +1,66 @@
+/* == Forms == */
+
+form {
+    margin: 0 auto;
+    width: 100%;
+}
+
+main form {
+    text-align: center;
+}
+
+input{
+    border-radius: 0.2rem;
+    background-color: $medium-purple;
+}
+
+.searchform__input-container {
+    width: 90%;
+    position: relative;
+
+    @media (min-width: 37.5em) {
+        width: 75%;
+    }
+
+    @media (min-width: 75em) {
+        width: 50%;
+    }
+
+    .searchform__input {
+        width:90%;
+        height: 3.5rem;
+        border: none;
+        padding-left:1.5rem;
+        font-size: 1.8rem;
+        &:hover,
+        &:focus {
+            border: none;
+            background-color: $web-orange; 
+        }
+    }
+    .searchform__button {
+        position: absolute;
+        width: 4rem;
+        height: 3.5rem;
+        top:0;
+        right:0;
+        display: flex;
+        border-top-right-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem;
+        justify-content: center;
+        align-items: center;
+        border:none;
+        background: $medium-purple;
+        &:hover,
+        &:focus {
+            background-color: $web-orange;
+            
+        }
+        .searchform__icon {
+            margin: 0;
+            padding: 0.2rem;
+            width: 2.5rem;
+            height: 2.5rem; 
+        }
+    }
+}

@@ -1,0 +1,102 @@
+/* == Navigation == */
+
+#main-nav{
+  text-align: right;
+}
+  
+.menu {
+  display: none;
+}
+  
+.menu__list{
+  width: 100%;
+  list-style: none;
+  font-family: 'Aclonica', sans-serif;
+  background-color: $cod-gray;
+}
+
+.main-nav {
+  display: flex;
+  flex-flow: column nowrap;
+}
+  
+.menu-main--mobile {
+    display: none;
+    margin-top: -0.3rem;
+    .menu__list {
+        display: flex;
+        margin: 0 auto;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+    
+        .menu__item {
+            padding: 1.5rem 2.5rem;
+            width: 100%;
+            &:hover {
+                background-color: $medium-purple;
+            }
+    
+            .item__link {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            img {
+              margin: 0 0.5rem 0 0;  
+            }
+            &:hover {
+              color: $brand-white;
+              text-decoration: none;
+            }
+            &:focus {
+              outline-offset: 1rem;
+              outline: 0.2rem solid $medium-purple;  
+              }
+            }
+        }
+    }
+}
+  
+.menu-main--desktop {  
+    display: flex;
+      
+    .menu__list {
+      max-width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+  
+      .menu__item {
+        padding: 1.5rem 2.5rem;
+        &:hover {
+          background-color: $medium-purple;
+        }
+  
+        .item__link {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between;
+          align-items: center;
+          img {
+            margin: 0 0.5rem 0 0;  
+          }
+          &:hover {
+            color: $brand-white;
+            text-decoration: none;
+          }
+          &:focus {
+            outline-offset: 1rem;
+            outline: 0.6rem solid $medium-purple;  
+          }
+        }
+      }
+    }
+}
+
+.sticky {
+  position:sticky;
+  z-index: 10;
+}

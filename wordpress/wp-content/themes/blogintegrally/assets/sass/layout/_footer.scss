@@ -1,0 +1,30 @@
+.footer-links {
+  margin: 0;
+  padding: 1.6rem 3.8rem;
+  background-color: var(--brand-alabaster);
+  list-style: none;
+  text-align: center;
+}
+
+.footer-links__item {
+  display: inline;
+  a {
+    padding: 0.8rem 1.2rem;
+    color: var(--brand-black);
+  
+    &:hover,
+    &:focus {
+      color: var(--brand-endeavor);
+    }
+  }
+}
+
+.footer-links__link {
+  padding: 0.8rem 1.2rem;
+  color: var(--brand-black);
+
+  &:hover,
+  &:focus {
+    color: var(--brand-endeavor);
+  }
+}

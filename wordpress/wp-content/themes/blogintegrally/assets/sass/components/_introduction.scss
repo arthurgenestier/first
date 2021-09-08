@@ -1,0 +1,16 @@
+.introduction {
+  background-color: var(--brand-black-transparent);
+  padding: 1rem;
+  margin: 0.1rem 0;
+  text-align: right;
+
+  // astuce améliorer la lisibilité sur fond clair
+  text-shadow: 0 0 6px black;
+}
+
+.introduction__subtitle {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 0.8em;
+  // 50% de ma font-size parent ( 24px car 1.5em)
+}

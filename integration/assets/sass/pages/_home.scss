@@ -1,0 +1,192 @@
+.pre-content {
+  margin: 5rem 0;
+  .ctas {
+    margin: 10rem 0;
+  }
+  @media (min-width: 75em) {
+    display: grid;
+    grid-template: 1fr / repeat(3, 1fr);
+    justify-items: center;
+    align-items:center;
+        
+    .music-player__wrapper {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      grid-row: 1;
+      grid-column: 1;
+      .music-player__wrapper p {
+        margin: 0;
+        padding: 0.5rem 0 0 0;
+      }
+    }
+    .ctas {
+      grid-row: 1;
+      grid-column: 2;
+      padding: 1rem;
+      .ctas__link {
+        margin: 1rem 0;
+      }
+    }
+    .follow-us {
+      grid-row: 1;
+      grid-column: 3;
+      width: 100%;
+      align-self: stretch;
+      outline: inset 0.2rem solid $brand-white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .follow-us__list {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .follow-us-text {
+        display: none;
+      }
+      .follow-us__link img {
+        transform: scale(1.5);
+        margin: 0;
+      }
+    }
+  }
+}
+
+
+.content{
+    border: 0.2rem solid $cod-gray;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 1rem;
+}
+
+
+/* clip */
+.clip__videos {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style-type: none;
+  .clip__item {
+    margin: 1rem 0;
+  }
+}
+
+.featured-clip,
+.clip,
+.featured-album,
+.concert {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  padding-bottom: 2rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* featured albums */
+.featured-album__list {
+  @media screen and (min-width: 37.5em) {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  } 
+  .featured-album__infos {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    
+    .featured-album__link {
+      border: 2px solid $web-orange;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        background-color: $web-orange;
+        color: $brand-black;
+        font-weight: bold;
+        transform: scale(1.1);
+      }
+    }
+  }
+  .featured-album__item {
+    margin: 1rem 0;
+  }
+}
+
+
+/* concerts */ 
+.concert {
+  width: 100%;
+  margin: 0 auto;
+}
+.concert__list {
+  width: 100%;
+  @media screen and (min-width: 37.5em) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.concert__item {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.title-header-music{
+  text-align: center;
+}
+
+.lien-index{
+  text-decoration:underline dotted $web-orange;
+}
+
+.follow-us__header,
+.element-home_1200,
+.element-home_600
+{
+  display: none;}
+
+@media (min-width: 37.5em) {
+  .element-home{
+      display: inline-block;
+      vertical-align: top;
+      max-width: 20rem;
+      width: calc(50%);
+      margin: 0 2rem;
+  }
+  .element-home_1200{
+  display: none;}
+  .content {
+    text-align: center;
+  }
+}
+
+@media (min-width: 75em) {
+  .element-home {
+      display: inline-block;
+      vertical-align: top;
+      min-width: 23rem;
+      width: calc(25%);
+  }
+  .content {
+    text-align: center;
+  }
+  .follow-us__header{
+    display:inline-block;
+  }
+}
+
+
+ 

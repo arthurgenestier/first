@@ -1,0 +1,106 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+.post {
+  border-right: 0.1rem solid var(--brand-gallery);
+  border-bottom: 0.1rem solid var(--brand-gallery);
+  padding: 2.2rem;
+
+  @include mixins.mq(variables.$bp-mobile) {
+    width: 50%;
+    border-right: 0.1rem solid var(--brand-gallery);
+    border-bottom: 0.1rem solid var(--brand-gallery);
+    padding: 2.2rem;
+  }
+}
+
+.post--single {
+  @include mixins.mq(variables.$bp-mobile) {
+    width: 100%;
+    border: 0;
+  }
+}
+
+.post__category {
+  text-transform: uppercase;
+  color: var(--brand-white);
+  font-weight: bold;
+  padding: 0.3rem 0.6rem;
+  font-size: 1.4rem;
+  background-color: grey;
+  border-radius: 0.4rem;
+}
+
+// les modifiers liés à .post__category
+.post__category--formation {
+  background-color: var(--brand-formation);
+  color: var(--brand-emperor);
+
+  &:hover,
+  &:focus {
+    background-color: var(--brand-emperor);
+    color: var(--brand-formation);
+  }
+}
+
+.post__category--exercices {
+  background-color: var(--brand-exercices);
+  color: var(--brand-black);
+
+  &:hover,
+  &:focus {
+    background-color: var(--brand-black);
+    color: var(--brand-exercices);
+  }
+}
+
+.post__category--maison {
+  background-color: var(--brand-maison);
+  color: var(--brand-white);
+
+  &:hover,
+  &:focus {
+    background-color: var(--brand-white);
+    color: var(--brand-maison);
+  }
+}
+
+.post__category {
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.post__title {
+  margin: 2rem 0;
+  font-size: 2.1rem;
+}
+
+.post__infos {
+  font-size: 1.4rem;
+  color: var(--brand-emperor);
+  margin: 1rem 0;
+}
+
+.post__author-pic {
+  width: 2.4rem;
+}
+
+.post__author {
+  font-style: normal;
+  font-weight: bold;
+  color: var(--brand-black);
+}
+
+.post__link {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.post--single code {
+  display: block;
+  overflow-x: auto;
+  white-space: pre;
+}

@@ -1,0 +1,1686 @@
+@charset "UTF-8";
+/* abstracts  */
+/* Variables */
+/* base */
+/* font face */
+/* aclonica-regular - latin */
+@font-face {
+  font-family: "Aclonica";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/aclonica-v11-latin-regular.woff2") format("woff2"), url("../fonts/aclonica-v11-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* baloo-bhaina-2-regular - latin */
+@font-face {
+  font-family: "Baloo Bhaina 2";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/baloo-bhaina-2-v4-latin-regular.woff2") format("woff2"), url("../fonts/baloo-bhaina-2-v4-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/*
+
+Reboot
+
+Normalization of HTML elements, manually forked from Normalize.css to remove styles targeting irrelevant browsers while applying new styles.
+
+Normalize is licensed MIT. https://github.com/necolas/normalize.css
+
+* Bootstrap v4.0.0-beta (https://getbootstrap.com)
+ * Copyright 2011-2017 The Bootstrap Authors
+ * Copyright 2011-2017 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+
+*/
+/*
+
+Document
+
+1. Change from `box-sizing: content-box` so that `width` is not affected by `padding` or `border`.
+
+2. Change the default font family in all browsers.
+
+3. Correct the line height in all browsers.
+
+4. Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.
+
+5. Setting @viewport causes scrollbars to overlap content in IE11 and Edge, so we force a non-overlapping, non-auto-hiding scrollbar to counteract.
+
+6. Change the default tap highlight to be completely transparent in iOS.
+
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* 1 */
+}
+
+html {
+  font-family: sans-serif;
+  /* 2 */
+  line-height: 1.15;
+  /* 3 */
+  -webkit-text-size-adjust: 100%;
+  /* 4 */
+  -ms-text-size-adjust: 100%;
+  /* 4 */
+  -ms-overflow-style: scrollbar;
+  /* 5 */
+  -webkit-tap-highlight-color: transparent;
+  /* 6 */
+}
+
+/* IE10+ doesn't honor `<meta name="viewport">` in some cases. */
+@-ms-viewport {
+  width: device-width;
+}
+/* Shim for "new" HTML5 structural elements to display correctly (IE10, older browsers) */
+article,
+aside,
+dialog,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
+
+/*
+Body
+
+1. Remove the margin in all browsers.
+2. As a best practice, apply a default `background-color`.
+3. Set an explicit initial text-align value so that we can later use the `inherit` value on things like `<th>` elements.
+*/
+body {
+  margin: 0;
+  /* 1 */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  /* 3 */
+  background-color: #fff;
+  /* 2 */
+}
+
+/*
+Suppress the focus outline on elements that cannot be accessed via keyboard.
+This prevents an unwanted focus outline from appearing around elements that might still respond to pointer events.
+
+Credit: https://github.com/suitcss/base
+*/
+[tabindex="-1"]:focus {
+  outline: none !important;
+}
+
+/*
+Content grouping
+
+1. Add the correct box sizing in Firefox.
+2. Show the overflow in Edge and IE.
+*/
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/*
+Typography
+*/
+/*
+Remove top margins from headings
+By default, `<h1>`-`<h6>` all receive top and bottom margins. We nuke the top margin for easier control within type scales as it avoids margin collapsing.
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+/*
+Reset margins on paragraphs
+
+Similarly, the top margin on `<p>`s get reset. However, we also reset the bottom margin to use `rem` units instead of `em`.
+*/
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/*
+Abbreviations
+
+1. Remove the bottom border in Firefox 39-.
+2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+3. Add explicit cursor to indicate changed behavior.
+4. Duplicate behavior to the data-* attribute for our tooltip plugin
+*/
+abbr[title],
+abbr[data-original-title] {
+  /* 4 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+  cursor: help;
+  /* 3 */
+  border-bottom: 0;
+  /* 1 */
+}
+
+address {
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit;
+}
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+  /* Undo browser default */
+}
+
+blockquote {
+  margin: 0 0 1rem;
+}
+
+dfn {
+  font-style: italic;
+  /* Add the correct font style in Android 4.3- */
+}
+
+b,
+strong {
+  font-weight: bolder;
+  /* Add the correct font weight in Chrome, Edge, and Safari */
+}
+
+small {
+  font-size: 80%;
+  /* Add the correct font size in all browsers */
+}
+
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+
+Links
+
+*/
+a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+  /* Remove the gray background on active links in IE 10. */
+  -webkit-text-decoration-skip: objects;
+  /* Remove gaps in links underline in iOS 8+ and Safari 8+. */
+}
+
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/*
+And undo these styles for placeholder links/named anchors (without href) which have not been made explicitly keyboard-focusable (without tabindex). It would be more straightforward to just use a[href] in previous block, but that causes specificity issues in many other styles that are too complex to fix.
+
+See https://github.com/twbs/bootstrap/issues/19402
+*/
+a:not([href]):not([tabindex]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):focus,
+a:not([href]):not([tabindex]):hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):focus {
+  outline: 0;
+}
+
+/*
+
+Code
+
+*/
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* Correct the inheritance and scaling of font size in all browsers. */
+  font-size: 1em;
+  /* Correct the odd `em` font sizing in all browsers. */
+}
+
+pre {
+  /* Remove browser default top margin */
+  margin-top: 0;
+  /* Reset browser default of `1em` to use `rem`s */
+  margin-bottom: 1rem;
+  /* Don't allow content to break outside */
+  overflow: auto;
+  /* We have @viewport set which causes scrollbars to overlap content in IE11 and Edge, so we force a non-overlapping, non-auto-hiding scrollbar to counteract. */
+  -ms-overflow-style: scrollbar;
+}
+
+/*
+
+Figures
+
+*/
+figure {
+  /* Apply a consistent margin strategy (matches our type styles). */
+  margin: 0 0 1rem;
+}
+
+/*
+
+Images and content
+
+*/
+img {
+  vertical-align: middle;
+  border-style: none;
+  /* Remove the border on images inside links in IE 10-. */
+  max-width: 100%;
+  /* --- */
+}
+
+svg:not(:root) {
+  overflow: hidden;
+  /* Hide the overflow in IE */
+}
+
+/*
+Avoid 300ms click delay on touch devices that support the `touch-action` CSS property.
+
+In particular, unlike most other browsers, IE11+Edge on Windows 10 on touch devices and IE Mobile 10-11 DON'T remove the click delay when `<meta name="viewport" content="width=device-width">` is present. However, they DO support removing the click delay via `touch-action: manipulation`.
+
+See:
+
+* https://getbootstrap.com/docs/4.0/content/reboot/#click-delay-optimization-for-touch
+
+* https://caniuse.com/#feat=css-touch-action
+
+*  https://patrickhlauke.github.io/touch/tests/results/#suppressing-300ms-delay
+*/
+a,
+area,
+button,
+[role=button],
+input:not([type=range]),
+label,
+select,
+summary,
+textarea {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+/*
+
+Tables
+
+*/
+table {
+  border-collapse: collapse;
+  /* Prevent double borders */
+}
+
+caption {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  color: #868e96;
+  text-align: left;
+  caption-side: bottom;
+}
+
+th {
+  /* Matches default `<td>` alignment by inheriting from the `<body>`, or the closest parent with a set `text-align`. */
+  text-align: inherit;
+}
+
+/*
+
+Forms
+
+*/
+label {
+  /* Allow labels to use `margin` for spacing. */
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+/*
+Remove the default `border-radius` that macOS Chrome adds.
+
+Details at https://github.com/twbs/bootstrap/issues/24093
+*/
+button {
+  border-radius: 0;
+}
+
+/*
+Work around a Firefox/IE bug where the transparent `button` background results in a loss of the default `button` focus styles.
+
+Credit: https://github.com/suitcss/base/
+*/
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  /* Remove the margin in Firefox and Safari */
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button,
+input {
+  overflow: visible;
+  /* Show the overflow in Edge */
+}
+
+button,
+select {
+  text-transform: none;
+  /* Remove the inheritance of text transform in Firefox */
+}
+
+/*
+1. Prevent a WebKit bug where (2) destroys native `audio` and `video` controls in Android 4.
+2. Correct the inability to style clickable types in iOS and Safari.
+*/
+button,
+html [type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/*
+Remove inner border and padding from Firefox, but don't restore the outline like Normalize.
+*/
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+input[type=radio],
+input[type=checkbox] {
+  box-sizing: border-box;
+  /* 1. Add the correct box sizing in IE 10- */
+  padding: 0;
+  /* 2. Remove the padding in IE 10- */
+}
+
+input[type=date],
+input[type=time],
+input[type=datetime-local],
+input[type=month] {
+  /*
+  Remove the default appearance of temporal inputs to avoid a Mobile Safari bug where setting a custom line-height prevents text from being vertically centered within the input.
+
+  See https://bugs.webkit.org/show_bug.cgi?id=139848
+  and https://github.com/twbs/bootstrap/issues/11266
+  */
+  -webkit-appearance: listbox;
+}
+
+textarea {
+  overflow: auto;
+  /* Remove the default vertical scrollbar in IE. */
+  /* Textareas should really only resize vertically so they don't break their (horizontal) containers. */
+  resize: vertical;
+}
+
+fieldset {
+  /*
+  Browsers set a default `min-width: min-content;` on fieldsets, unlike e.g. `<div>`s, which have `min-width: 0;` by default. So we reset that to ensure fieldsets behave more like a standard block element.
+
+  See https://github.com/twbs/bootstrap/issues/12359
+  and https://html.spec.whatwg.org/multipage/#the-fieldset-and-legend-elements
+  */
+  min-width: 0;
+  /* Reset the default outline behavior of fieldsets so they don't affect page layout. */
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/*
+1. Correct the text wrapping in Edge and IE.
+2. Correct the color inheritance from `fieldset` elements in IE.
+*/
+legend {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  line-height: inherit;
+  color: inherit;
+  /* 2 */
+  white-space: normal;
+  /* 1 */
+}
+
+progress {
+  vertical-align: baseline;
+  /* Add the correct vertical alignment in Chrome, Firefox, and Opera. */
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Chrome.
+*/
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  /*
+  This overrides the extra rounded corners on search inputs in iOS so that our `.form-control` class can properly style them. Note that this cannot simply be added to `.form-control` as it's not specific enough.
+
+  For details, see https://github.com/twbs/bootstrap/issues/11586.
+  */
+  outline-offset: -2px;
+  -webkit-appearance: none;
+}
+
+/*
+Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+*/
+[type=search]::-webkit-search-cancel-button,
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button;
+}
+
+/*
+Correct element displays
+*/
+output {
+  display: inline-block;
+}
+
+summary {
+  display: list-item;
+  /* Add the correct display in all browsers */
+}
+
+template {
+  display: none;
+  /* Add the correct display in IE */
+}
+
+/*
+Always hide an element with the `hidden` HTML attribute (from PureCSS).
+Needed for proper display in IE 10-.
+*/
+[hidden] {
+  display: none !important;
+}
+
+/* == Typography == */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #000;
+  font-family: "Baloo Bhaina 2", sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  font-family: "Aclonica", sans-serif;
+  color: #FFA502;
+  padding: 0 1rem;
+  margin: 1rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+/* == Base == */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  margin: 0 auto 5rem auto;
+}
+
+/* == utils == */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* components */
+.music-player__wrapper {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4rem auto;
+}
+
+.music-player__audio {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* buttons */
+.header-inner__button {
+  width: 6rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+  margin: 0 1rem 0 auto;
+  background-color: #0B0B0B;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.header-inner__button img {
+  transform: scale(0.8);
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+.header-inner__button span {
+  color: #fff;
+}
+.header-inner__button:hover img, .header-inner__button:focus img {
+  outline: 0.3rem solid #8C73FF;
+}
+
+/* == Images == */
+img {
+  border-radius: 2rem;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* == Links == */
+a {
+  color: #FFA502;
+}
+
+a:hover {
+  color: #8C73FF;
+}
+
+.item__link,
+.footer__link,
+.follow-us__link {
+  text-decoration: none;
+}
+
+.item__link img {
+  width: 2rem;
+  height: auto;
+}
+
+/* == CTAs == */
+.ctas__link {
+  font-family: "Aclonica", sans-serif;
+  font-size: 1.8rem;
+  display: block;
+  padding: 1.3rem 7.2rem;
+  border-radius: 1rem;
+  text-align: center;
+  text-decoration: none;
+  /* mobile first */
+  width: 100%;
+  margin: 0 auto 3rem auto;
+  max-width: 35rem;
+  cursor: pointer;
+  text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+}
+.ctas__link:hover, .ctas__link:focus {
+  text-decoration: none;
+}
+
+.ctas__link--fanclub {
+  color: #fff;
+  background-color: #8C73FF;
+}
+
+.ctas__link--fanclub:hover,
+.ctas__link--fanclub:focus {
+  color: #fff;
+  background-color: #FFA502;
+}
+
+.ctas__link--newsletter {
+  color: #fff;
+  background-color: #8C73FF;
+}
+
+.ctas__link--newsletter:hover,
+.ctas__link--newsletter:focus {
+  color: #fff;
+  background-color: #FFA502;
+}
+
+.ctas__link--buy {
+  color: #fff;
+  background: linear-gradient(45deg, #FFA502, #8C73FF);
+  padding: 1rem 0;
+  margin-top: 1rem;
+}
+
+.ctas__link--buy:hover,
+.ctas__link--buy:focus {
+  background-color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+  color: #000;
+}
+
+/*  == Lists == */
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+li::marker {
+  color: #FFA502;
+  font-weight: bold;
+}
+
+/* == Search form == */
+.fanclub-input {
+  border: 1px solid #ccc;
+  font-size: 20px;
+  width: 300px;
+  min-height: 30px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+
+.fanclub-input[type=submit] {
+  background-color: #fff;
+  padding: 10px;
+  cursor: pointer;
+}
+
+label {
+  cursor: pointer;
+}
+
+/* == Thumbnails == */
+.featured-album__thumbnail,
+.concert__thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+
+/* == Video == */
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* layout */
+/* == Navigation == */
+#main-nav {
+  text-align: right;
+}
+
+.menu {
+  display: none;
+}
+
+.menu__list {
+  width: 100%;
+  list-style: none;
+  font-family: "Aclonica", sans-serif;
+  background-color: #0B0B0B;
+}
+
+.main-nav {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.menu-main--mobile {
+  display: none;
+  margin-top: -0.3rem;
+}
+.menu-main--mobile .menu__list {
+  display: flex;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.menu-main--mobile .menu__list .menu__item {
+  padding: 1.5rem 2.5rem;
+  width: 100%;
+}
+.menu-main--mobile .menu__list .menu__item:hover {
+  background-color: #8C73FF;
+}
+.menu-main--mobile .menu__list .menu__item .item__link {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.menu-main--mobile .menu__list .menu__item .item__link img {
+  margin: 0 0.5rem 0 0;
+}
+.menu-main--mobile .menu__list .menu__item .item__link:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.menu-main--mobile .menu__list .menu__item .item__link:focus {
+  outline-offset: 1rem;
+  outline: 0.2rem solid #8C73FF;
+}
+
+.menu-main--desktop {
+  display: flex;
+}
+.menu-main--desktop .menu__list {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+.menu-main--desktop .menu__list .menu__item {
+  padding: 1.5rem 2.5rem;
+}
+.menu-main--desktop .menu__list .menu__item:hover {
+  background-color: #8C73FF;
+}
+.menu-main--desktop .menu__list .menu__item .item__link {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-main--desktop .menu__list .menu__item .item__link img {
+  margin: 0 0.5rem 0 0;
+}
+.menu-main--desktop .menu__list .menu__item .item__link:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.menu-main--desktop .menu__list .menu__item .item__link:focus {
+  outline-offset: 1rem;
+  outline: 0.6rem solid #8C73FF;
+}
+
+.sticky {
+  position: sticky;
+  z-index: 10;
+}
+
+.skip-link {
+  background-color: #000;
+  border: 0.2rem solid #8C73FF;
+  display: block;
+  padding: 1rem 0 1rem 2rem;
+}
+
+#main {
+  padding: 1.5rem;
+  color: #8C73FF;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + #main {
+  padding-top: 15rem;
+}
+
+.header-inner {
+  display: grid;
+  grid-template-areas: ". logo menu";
+  text-align: center;
+  background-color: #000;
+  align-items: center;
+}
+@media screen and (min-width: 37.5em) {
+  .header-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.header-inner__logo {
+  max-width: 60%;
+  grid-area: logo;
+  color: #fff;
+  justify-self: center;
+  text-align: center;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  padding: 3rem;
+}
+/* == Footer == */
+.footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  background-color: #0B0B0B;
+}
+
+.footer__logo {
+  margin: 2rem auto 1rem auto;
+  width: 15rem;
+  display: block;
+}
+@media (min-width: 37.5em) {
+  .footer__logo {
+    width: 20rem;
+  }
+}
+
+.footer-container {
+  width: 90%;
+  height: auto;
+  margin: 2rem auto 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+}
+.footer-container .footer-menu,
+.footer-container .follow-us__list,
+.footer-container .footer-searchform {
+  margin-bottom: 3rem;
+}
+@media (min-width: 37.5em) {
+  .footer-container .footer-menu {
+    margin-bottom: 0;
+  }
+}
+.footer-container .menu-socials-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 37.5em) {
+  .footer-container .menu-socials-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 37.5em) {
+  .footer-container {
+    width: 60%;
+  }
+}
+@media (min-width: 75em) {
+  .footer-container {
+    width: 40%;
+  }
+}
+
+.follow-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.follow-us__list {
+  display: flex;
+}
+
+.follow-us__icon {
+  border-radius: 0;
+}
+
+.footer-searchform {
+  margin: 1rem 0;
+}
+
+.footer-searchform__input-wrapper {
+  display: grid;
+  grid-template: 1fr/repeat(5, 1fr);
+}
+
+.footer__link {
+  color: #fff;
+}
+
+.follow-us__icon {
+  margin: 0 1.5rem 0 0;
+}
+
+/* == Forms == */
+form {
+  margin: 2rem;
+  width: 100%;
+}
+
+main form {
+  text-align: center;
+}
+
+input {
+  border-radius: 0.2rem;
+  background-color: #8C73FF;
+}
+
+.searchform__input-container {
+  width: 90%;
+  position: relative;
+}
+@media (min-width: 37.5em) {
+  .searchform__input-container {
+    width: 75%;
+  }
+}
+@media (min-width: 75em) {
+  .searchform__input-container {
+    width: 50%;
+  }
+}
+.searchform__input-container .searchform__input {
+  width: 100%;
+  height: 3.5rem;
+  border: none;
+  padding-left: 1.5rem;
+  font-size: 1.8rem;
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  color: #0B0B0B;
+  font-weight: bold;
+}
+.searchform__input-container .searchform__input:hover, .searchform__input-container .searchform__input:focus {
+  border: none;
+  outline: 0.5rem solid #fff;
+}
+.searchform__input-container .searchform__button {
+  position: absolute;
+  width: 3.5rem;
+  height: 3.5rem;
+  top: 0;
+  right: 0;
+  display: flex;
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: #8C73FF;
+}
+.searchform__input-container .searchform__button:hover, .searchform__input-container .searchform__button:focus {
+  background-color: #FFA502;
+}
+.searchform__input-container .searchform__button .searchform__icon {
+  padding: 0.2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.py-5 {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
+.container {
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: calc(var(--bs-gutter-x) / -2);
+  margin-left: calc(var(--bs-gutter-x) / -2);
+}
+
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) / 2);
+  padding-left: calc(var(--bs-gutter-x) / 2);
+  margin-top: var(--bs-gutter-y);
+}
+
+.row-cols-1 > * {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.row-cols-sm-2 > * {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.row-cols-md-3 > * {
+  flex: 0 0 auto;
+  width: 33.3333333333%;
+}
+
+.g-3 {
+  --bs-gutter-x: 1rem;
+}
+
+.g-3 {
+  --bs-gutter-y: 1rem;
+}
+
+.card-img-top {
+  width: 100%;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: 1rem 1rem;
+}
+
+.card-text:last-child {
+  margin-bottom: 0;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.justify-content-between {
+  justify-content: space-between !important;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+.col-sm-6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.form-label {
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .form-control {
+    transition: none;
+  }
+}
+.form-control[type=file] {
+  overflow: hidden;
+}
+
+.form-control[type=file]:not(:disabled):not([readonly]) {
+  cursor: pointer;
+}
+
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.form-control::-webkit-date-and-time-value {
+  height: 1.5em;
+}
+
+.form-control::-moz-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+.form-control::placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+.form-control:disabled, .form-control[readonly] {
+  background-color: #e9ecef;
+  opacity: 1;
+}
+
+.form-control::file-selector-button {
+  padding: 0.375rem 0.75rem;
+  margin: -0.375rem -0.75rem;
+  -webkit-margin-end: 0.75rem;
+  margin-inline-end: 0.75rem;
+  color: #212529;
+  background-color: #e9ecef;
+  pointer-events: none;
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+  border-inline-end-width: 1px;
+  border-radius: 0;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .form-control::file-selector-button {
+    transition: none;
+  }
+}
+.form-control:hover:not(:disabled):not([readonly])::file-selector-button {
+  background-color: #dde0e3;
+}
+
+.form-control::-webkit-file-upload-button {
+  padding: 0.375rem 0.75rem;
+  margin: -0.375rem -0.75rem;
+  -webkit-margin-end: 0.75rem;
+  margin-inline-end: 0.75rem;
+  color: #212529;
+  background-color: #e9ecef;
+  pointer-events: none;
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+  border-inline-end-width: 1px;
+  border-radius: 0;
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .form-control::-webkit-file-upload-button {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
+  background-color: #dde0e3;
+}
+
+textarea.form-control {
+  min-height: calc(1.5em + 0.75rem + 2px);
+}
+
+.invalid-feedback {
+  display: none;
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 0.875em;
+  color: #dc3545;
+}
+
+.col-12 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}
+
+.col-sm-6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.col-sm-12 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.col-md-5 {
+  flex: 0 0 auto;
+  width: 41.6666666667%;
+}
+
+.col-md-4 {
+  flex: 0 0 auto;
+  width: 33.3333333333%;
+}
+
+.col-md-3 {
+  flex: 0 0 auto;
+  width: 25%;
+}
+
+/* pages */
+.pre-content {
+  margin: 5rem 0;
+}
+.pre-content .ctas {
+  margin: 10rem 0;
+}
+@media (min-width: 75em) {
+  .pre-content {
+    display: grid;
+    grid-template: 1fr/repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+  .pre-content .music-player__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .pre-content .music-player__wrapper .music-player__wrapper p {
+    margin: 0;
+    padding: 0.5rem 0 0 0;
+  }
+  .pre-content .ctas {
+    grid-row: 1;
+    grid-column: 2;
+    padding: 1rem;
+  }
+  .pre-content .ctas .ctas__link {
+    margin: 1rem 0;
+  }
+  .pre-content .follow-us {
+    grid-row: 1;
+    grid-column: 3;
+    width: 100%;
+    align-self: stretch;
+    outline: inset 0.2rem solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pre-content .follow-us .follow-us__list {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .pre-content .follow-us .follow-us-text {
+    display: none;
+  }
+  .pre-content .follow-us .follow-us__link img {
+    transform: scale(1.5);
+    margin: 0;
+  }
+}
+
+.content {
+  border: 0.2rem solid #0B0B0B;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 1rem;
+}
+
+/* clip */
+.clip__videos {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style-type: none;
+}
+.clip__videos .clip__item {
+  margin: 1rem 0;
+}
+
+.featured-clip,
+.clip,
+.featured-album,
+.concert {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  padding-bottom: 2rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* featured albums */
+@media screen and (min-width: 37.5em) {
+  .featured-album__list {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+.featured-album__list .featured-album__infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.featured-album__list .featured-album__infos .featured-album__link {
+  border: 2px solid #FFA502;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+.featured-album__list .featured-album__infos .featured-album__link:hover, .featured-album__list .featured-album__infos .featured-album__link:focus {
+  text-decoration: none;
+  background-color: #FFA502;
+  color: #000;
+  font-weight: bold;
+  transform: scale(1.1);
+}
+.featured-album__list .featured-album__item {
+  margin: 1rem 0;
+}
+
+/* concerts */
+.concert {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.concert__list {
+  width: 100%;
+}
+@media screen and (min-width: 37.5em) {
+  .concert__list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.concert__item {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.title-header-music {
+  text-align: center;
+}
+
+.lien-index {
+  text-decoration: underline dotted #FFA502;
+}
+
+.follow-us__header,
+.element-home_1200,
+.element-home_600 {
+  display: none;
+}
+
+@media (min-width: 37.5em) {
+  .element-home {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 20rem;
+    width: calc(50%);
+    margin: 0 2rem;
+  }
+
+  .element-home_1200 {
+    display: none;
+  }
+
+  .content {
+    text-align: center;
+  }
+}
+@media (min-width: 75em) {
+  .element-home {
+    display: inline-block;
+    vertical-align: top;
+    min-width: 23rem;
+    width: calc(25%);
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  .follow-us__header {
+    display: inline-block;
+  }
+}
+/* page Clips */
+.clips-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30rem;
+  background: url("../images/tv.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.clips {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto 5rem auto;
+}
+
+.clips__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2rem auto;
+}
+
+.clips__video {
+  width: 720px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.clips__info {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+/* == page Clip (page détail: single.php) == */
+/* music*/
+.musics-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30rem;
+  background: url("../images/guitar.png") center center no-repeat;
+  background-size: cover;
+}
+
+/* == page 404 == */
+#peugeot {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.footer-searchform {
+  text-align: left;
+}
+
+.text-pages p {
+  text-align: left;
+}
+
+.text-pages ul {
+  text-align: left;
+  list-style: circle;
+}
+
+.legal h1,
+.legal h2,
+.legal h3,
+.legal h4 {
+  font-family: "Baloo Bhaina 2", sans-serif;
+}
+
+.tour-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30rem;
+  background: url("../images/concert_thumbnail.png") center center no-repeat;
+  background-size: cover;
+}

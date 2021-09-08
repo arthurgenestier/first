@@ -1,0 +1,9 @@
+@use "variables";
+
+// Media query
+// Default : desktop
+@mixin mq($breakpoint: variables.$bp-desktop) {
+  @media screen and (min-width: ($breakpoint / 16)) {
+    @content;
+  }
+}

@@ -1,0 +1,103 @@
+/* == Navigation == */
+  
+.menu__list{
+  width: 100%;
+  list-style: none;
+  font-family: 'Aclonica', sans-serif;
+  background-color: $cod-gray;
+}
+  
+.menu-main--mobile {
+    display: none;
+    margin-top: -0.1rem;
+    .menu__list {
+        display: flex;
+        margin: 0 auto;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+    
+        .menu__item {
+            padding: 1.5rem 2.5rem;
+            width: 100%;
+            &:hover {
+                background-color: $brand-black-transparent;
+            }
+    
+            .item__link {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            img {
+              margin: 0 0.5rem 0 0;  
+            }
+            &:hover {
+              color: $brand-white;
+              text-decoration: none;
+            }
+            &:focus {
+              outline-offset: 1rem;
+              outline: 0.2rem solid $brand-black-transparent;  
+              }
+            }
+        }
+    }
+}
+  
+.menu-main--desktop {  
+    display: flex;
+      
+    .menu__list {
+      max-width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+  
+      .menu__item {
+        padding: 1.5rem 2.5rem;
+        &:hover {
+          background-color: $brand-black-transparent;
+        }
+  
+        .item__link {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between;
+          align-items: center;
+          img {
+            margin: 0 0.5rem 0 0;  
+          }
+          &:hover {
+            color: $brand-white;
+            text-decoration: none;
+          }
+          &:focus {
+            outline-offset: 1rem;
+            outline: 0.6rem solid $brand-black-transparent;  
+          }
+        }
+      }
+    }
+}
+
+.sticky {
+  position:sticky;
+  z-index: 10;
+}
+
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  margin: 1rem;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}

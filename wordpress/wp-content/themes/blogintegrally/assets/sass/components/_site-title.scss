@@ -1,0 +1,17 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+.site-title {
+  color: var(--brand-white);
+  background-color: var(--brand-black-transparent);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 3rem;
+  margin: 0;
+  padding: 0 1rem;
+  text-align: center;
+
+  @include mixins.mq(variables.$bp-desktop) {
+    text-align-last: left;
+  }
+}

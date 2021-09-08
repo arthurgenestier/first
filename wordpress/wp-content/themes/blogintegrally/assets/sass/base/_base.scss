@@ -1,0 +1,28 @@
+:root {
+  --brand-black: #000;
+  --brand-white: #fff;
+  --brand-black-transparent: rgba(0,0,0,0.6);
+  --brand-emperor: #555;
+  --brand-endeavor: #0056b3;
+  --brand-formation: #98dc62;
+  --brand-exercices: #ff7367;
+  --brand-maison: #0766f0;
+  --brand-alabaster: #f9f9f9;
+  --brand-gallery: #eaeaea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.6rem;
+  line-height: 2;
+  font-family: Kreon, sans-serif;
+}

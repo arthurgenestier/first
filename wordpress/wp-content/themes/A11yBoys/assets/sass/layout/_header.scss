@@ -1,0 +1,73 @@
+// Header 
+  
+.skip-link{
+  background-color: $brand-black;
+  border: 0.2rem solid $medium-purple;
+  display: block;
+  padding: 0.1rem 0 0.1rem 0.2rem;
+}
+
+
+
+main{
+  padding: 1.5rem;
+  color: $medium-purple;
+}
+  
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + #main {
+  padding-top: 15rem;
+}
+  
+.header-inner {
+  display: grid;
+  grid-template-areas: ". logo menu";
+  text-align: center;
+  background-color: $brand-black;
+  align-items: center;
+  
+
+  @media screen and (min-width: 37.5em) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+  
+.header-inner__logo {
+  max-width: 60%;  
+  grid-area: logo;
+  color: $brand-white;
+  justify-self: center;
+  text-align:center;
+  margin:0 auto;
+  text-align:center;
+  display:flex;
+  padding: 3rem;
+
+  @media screen and (min-width: 37.5em) {
+
+  }
+}
+
+.menu__item a[aria-current=page] {
+  background-color: $medium-purple;
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  border-radius: 0.3rem;
+}
+
+  
+
+
+
+  
+  
+  
